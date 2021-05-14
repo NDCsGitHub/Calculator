@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Title</title>
+    <title>Calculator</title>
     <link href="reset.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="style.less" rel="stylesheet/less" type="text/css" media="all"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"> 
 </head>
 
-
 <body>
+<h1>Calculator</h1>
+
+<div class=dayNightContainer>
+<div class="day">Day</div>
+<div class="night">Night</div>
+</div>
+
+
+  
+
+<div class = "calculatorContainer">
+    <div class="display">
+        <div class=displayTop></div>
+        <div class=displayBot>0</div>
+    </div>
+    <div class="numKey num0 key">0</div>
+    <div class="decimal key">.</div>
+    <div class="numKey num1 key">1</div>
+    <div class="numKey num2 key">2</div>
+    <div class="numKey num3 key">3</div>
+    <div class="numKey num4 key">4</div>
+    <div class="numKey num5 key">5</div>
+    <div class="numKey num6 key">6</div>
+    <div class="numKey num7 key">7</div>
+    <div class="numKey num8 key">8</div>
+    <div class="numKey num9 key">9</div>
+    <div class="equal key">=</div>
+    <div class="plus key" id="opsButton">+</div>
+    <div class="ac key">AC</div>
+    <div class="multiply key" id="opsButton">x</div>
+    <div class="minus key" id="opsButton">-</div>
+    <div class="del key">DEL</div>
+    <div class="divide key" id="opsButton">÷</div>
+</div>
+
 
 <script src="script.js"> </script> 
 </body>

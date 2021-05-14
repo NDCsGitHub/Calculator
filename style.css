@@ -1,1 +1,387 @@
+body{
+  height: 100%;
+  width: 100%;
+  background: rgb(44, 35, 35);
+  font-family: 'Oswald', sans-serif;
+  transition: 0.3s;
+}
 
+h1{
+  text-align: center;
+  position:relative;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: honeydew
+}
+
+
+.key{
+  background:rgb(29, 36, 29);
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  color: honeydew;
+  transition: 0.3s;
+}
+  .key:hover {
+    background-color: #ff8a8a;
+    transition: 0.3s;
+  }
+  .key:active {
+    background-color: #f54343;
+    transform: translateY(6px);
+    transition: 0.3s;
+  }
+
+
+.calculatorContainer {
+    background-color: rgb(35, 52, 56);
+    border-radius: 15px;
+    width: 500px;
+    height: 600px;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+      "display display display display display"
+      "Clear backSpace backSpace divide divide"
+      "num7 num8 num9 multiply multiply"
+      "num4 num5 num6 minus minus"
+      "num1 num2 num3 equal plus"
+      "num0 num0 decimal equal plus";   
+}
+  .display{ 
+    background-color:rgb(29, 36, 29);
+    margin: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    grid-area: display;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+    word-wrap:break-word;
+    word-break: break-all;
+    color: honeydew;
+    transition: 0.3s;
+    }
+    .displayTop{
+      margin: 5px;
+      display: flex;
+      justify-content: end;
+      font-size: 18px;
+      
+    }
+    .displayBot{
+      margin:5px;
+      display: flex;
+      justify-content: end;
+      font-size: 25px;
+    }
+
+  .num0 {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    grid-area: num0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .decimal { 
+    margin-bottom: 10px;
+    grid-area: decimal; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    }
+  .num1 {
+    margin-left: 10px;
+    grid-area: num1; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    }
+  .num2 { 
+    grid-area: num2; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    }
+  .num3 {
+    grid-area: num3;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    }
+  .num4 {
+    margin-left: 10px;
+    grid-area: num4; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    }
+  .num5 { 
+    grid-area: num5; 
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    }
+  .num6 { 
+    grid-area: num6; 
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    }
+  .num7 {
+    margin-left: 10px;
+    grid-area: num7; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    }
+  .num8 { 
+    grid-area: num8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    }
+  .num9 { 
+    grid-area: num9; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    }
+  .equal { 
+    margin-bottom: 10px;
+    grid-area: equal; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color:red
+    }
+  .plus {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    grid-area: plus; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    }
+  .ac {
+    margin-left: 10px;
+    grid-area: Clear; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(157, 157, 218);
+    }
+  .multiply { 
+    margin-right: 10px;
+    grid-area: multiply; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    }
+  .minus {
+    margin-right: 10px;
+    grid-area: minus; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    }
+  .del {
+    grid-area: backSpace; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(157, 157, 218);
+    }
+  .divide {
+    margin-right: 10px;
+    grid-area: divide;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    }
+
+
+
+
+
+
+
+.dayNightContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 30px;
+  width:300px;
+  background-color: rgb(44, 35, 35);
+  transition: 0.3s;
+  border-radius: 20px;
+}
+.dayNightContainerDay{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 30px;
+  width:300px;
+  background-color:rgb(223, 201, 201);
+  transition: 0.3s;
+}
+.day{
+  text-align: center;
+  color: honeydew;
+  font-weight: bold;
+  background-color: rgb(176, 180, 111);
+  padding:10px;
+  border-radius: 20px;
+  font-size: 20px;
+  width:100px;
+  cursor: pointer;
+}
+.day:hover{
+  transition: 0.3s;
+  box-shadow: 0px 0px 15px 7px rgba(252, 252, 113, 0.73)
+}
+.night{
+  text-align: center;
+  color: honeydew;
+  font-weight: bold;
+  background-color: rgb(93, 124, 192);
+  padding:10px;
+  border-radius: 20px;
+  font-size: 20px;
+  width:100px;
+  cursor: pointer;
+}
+.night:hover {
+  transition: 0.3s;
+  box-shadow: 0px 0px 15px 7px rgba(98, 134, 233, 0.73);
+}
+
+.bodyday{
+  height: 100%;
+  width: 100%;
+  background: rgb(223, 201, 201);
+  font-family: 'Oswald', sans-serif;
+  transition: 0.3s;
+}
+
+.h1Day{
+  text-align: center;
+  position:relative;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(73, 124, 73);
+  transition: 0.3s;
+}
+
+
+.keyDay{
+  background:honeydew;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  color: rgb(29, 36, 29);
+  transition: 0.3s;
+
+}
+  .keyDay:hover {
+    background-color: #ff8a8a;
+    transition: 0.1s;
+  }
+  .keyDay:active {
+    background-color: #f54343;
+    transform: translateY(6px);
+    transition: 0.1s;
+  }
+
+.opsButtonDay{
+  background:honeydew;
+  color: red;
+  transition: 0.3s;
+}
+
+.delDay {
+  background-color: honeydew;
+  transition: 0.3s;
+}
+
+.acDay {
+  background-color: honeydew;
+  transition: 0.3s;
+}
+
+.displayDay{ 
+  background-color: honeydew;
+  color: rgb(29, 36, 29);
+  transition: 0.3s;
+}
+
+.calculatorContainerDay{
+background-color: rgb(206, 133, 133);
+transition: 0.3s;
+box-shadow: 0px 0px 40px -7px rgba(225,29,29,0.54);
+ 
+}
